@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="taxes_inherit_contract_form_view" model="ir.ui.view">
+            <field name="name">Taxes</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='information']/group" position="inside">
+                    <!-- Add your fields or attributes here -->
+                    <group name="taxes" string="Taxes">
+                        <field name="yearly_taxes"/>
+                        <field name="monthly_taxes"/>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>
